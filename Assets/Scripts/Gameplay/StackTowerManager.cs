@@ -76,6 +76,7 @@ public class StackTowerManager : MonoBehaviour
         go.transform.localScale = lastBlock.localScale;
         go.tag = "ActiveBlock";
         go.layer = LayerMask.NameToLayer("Blocks");
+        
 
         SetupActiveBlock(go, currentAxisX);
 
