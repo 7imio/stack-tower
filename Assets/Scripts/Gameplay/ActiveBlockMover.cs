@@ -6,8 +6,9 @@ public class ActiveBlockMover : MonoBehaviour
     [SerializeField] private Transform waypointA;
     [SerializeField] private Transform waypointB;
     [SerializeField] private float speed = 3f;
-    [SerializeField] private float amplitude = 6f;
-    [SerializeField] private bool moveOnX = true; // false => Z
+    
+    [SerializeField] public float amplitude = 6f;
+    [SerializeField] public bool moveOnX = true; // false => Z
 
     [Header("Anchoring")]
     [Tooltip("Centre de référence quand on change d'axe (ex: dernier StackBlock). Si null -> on utilise la position actuelle.")]
@@ -69,5 +70,19 @@ public class ActiveBlockMover : MonoBehaviour
         {
             transform.position = center;
         }
+    }
+
+    public void SetAxis(bool onX, bool resetPosition = true) 
+    {
+        if (moveOnX == onX) return;
+        moveOnX = onX;
+        lastMoveOnX = !onX;
+        RecomputePath(resetPosition);
+        phaseStartTime = Time.time;
+    }
+    public void SetAmplitude(float value, bool resetPosition= false) 
+    {
+        amplitude = Mathf.Max(0.0001f, value);
+        RecomputePath(resetPosition);
     }
 }

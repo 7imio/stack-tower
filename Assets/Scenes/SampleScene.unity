@@ -152,6 +152,11 @@ Transform:
   - {fileID: 272504017}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &32209147 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4378778553702852570, guid: a6c0e5f2512853d4cae4f015cde5b7e6, type: 3}
+  m_PrefabInstance: {fileID: 1738204390}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &272504016
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,6 +500,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1123351240}
+  - component: {fileID: 1123351241}
   m_Layer: 0
   m_Name: StackRoot
   m_TagString: Untagged
@@ -518,6 +524,27 @@ Transform:
   - {fileID: 426999169}
   m_Father: {fileID: 864821}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1123351241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123351239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 595173c76bf2a1344a6a96e0e0894953, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  stackRoot: {fileID: 1123351240}
+  activeBlockPrefab: {fileID: 2971219294077218721, guid: a6c0e5f2512853d4cae4f015cde5b7e6, type: 3}
+  baseStackBlock: {fileID: 426999169}
+  initialActiveBlock: {fileID: 32209147}
+  activeMaterial: {fileID: 2100000, guid: 298fe0005dc89d64d8a04e5d7d8b0a81, type: 2}
+  placedMaterial: {fileID: 2100000, guid: 5406d314da04b6447a410ddd600595af, type: 2}
+  blockHeight: 1
+  startAxisX: 1
+  amplitudeFactor: 2
 --- !u!1001 &1194264753
 PrefabInstance:
   m_ObjectHideFlags: 0

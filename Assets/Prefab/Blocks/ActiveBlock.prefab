@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4855034927566439242}
   - component: {fileID: 6338913252161940477}
   - component: {fileID: 9087303057196639128}
-  - component: {fileID: 997244158792467862}
+  - component: {fileID: 2858063421459445944}
   m_Layer: 6
   m_Name: ActiveBlock
   m_TagString: ActiveBlock
@@ -132,7 +132,7 @@ MonoBehaviour:
   moveOnX: 1
   anchor: {x: 0, y: 0, z: 0}
   resetPositionOnAxisChange: 1
---- !u!114 &997244158792467862
+--- !u!114 &2858063421459445944
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,6 +141,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2971219294077218721}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f2c8353e3db1284789a3095315377a6, type: 3}
+  m_Script: {fileID: 11500000, guid: 85b1d31b9438b6c48baaf7f04eae13c9, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BlockFallOnDrop
+  m_EditorClassIdentifier: Assembly-CSharp::DropOnTop
+  fallDuration: 0.5
+  landingEpsilon: 0.0005
+  landingMask:
+    serializedVersion: 2
+    m_Bits: 64
